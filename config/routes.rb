@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get  'signup' , to: 'pages#signup'
+  get  'about' , to: 'pages#about'
   ### the following lines 10-11 shows when we added a new routes and run rake routes (Verb - Http GET)
   ## Prefix Verb URI Pattern             Controller#Action
   ## welcome_home GET  /welcome/home(.:format) welcome#home 
