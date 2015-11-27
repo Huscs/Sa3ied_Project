@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   root 'pages#home'
-  get  'signup' , to: 'pages#signup'
+  get  'signup' , to: 'users#new'
   get  'about' , to: 'pages#about'
+
+  resources :users, except: [:new]
+
   ### the following lines 10-11 shows when we added a new routes and run rake routes (Verb - Http GET)
   ## Prefix Verb URI Pattern             Controller#Action
   ## welcome_home GET  /welcome/home(.:format) welcome#home 
