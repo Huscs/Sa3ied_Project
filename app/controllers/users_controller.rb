@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 			flash[:success] = "Welcome to Sa3ied project #{@user.username}"
 			redirect_to root_path
 		else
-			#render 'new'
+			render 'new' # display error msg
 		end
 
 	end
