@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :locations
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -12,6 +13,9 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   resources :users, except: [:new]
+
+  # Location
+  get 'getlocation', to:'locations#index'
 
 
   ### the following lines 10-11 shows when we added a new routes and run rake routes (Verb - Http GET)
