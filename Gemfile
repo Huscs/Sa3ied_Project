@@ -47,3 +47,20 @@ group :development do
   gem 'spring'
 end
 
+#modfai time for windows
+gem 'tzinfo-data'
+
+#rspec gem
+gem 'rspec-rails'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
+end
