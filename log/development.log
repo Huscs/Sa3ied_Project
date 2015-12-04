@@ -43570,3 +43570,177 @@ Processing by PagesController#home as HTML
   Rendered layouts/_messages.html.erb (0.1ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 258ms (Views: 257.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 16:57:28 +0300
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 455ms (Views: 450.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 18:20:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 689ms (Views: 678.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 18:20:53 +0300
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 281ms (Views: 280.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2015-11-29 18:28:50 +0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 5 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 285ms (Views: 280.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signup" for ::1 at 2015-11-29 18:28:56 +0300
+Processing by UsersController#new as HTML
+  Rendered shared/_errors.html.erb (3.1ms)
+  Rendered users/_form.html.erb (22.1ms)
+  Rendered users/new.html.erb within layouts/application (25.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 271ms (Views: 270.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-11-29 18:32:34 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QEhETiFPWZOgqxc+3UqSU0WKEU05GxAFyZiRASZWZJsTugMjAMxGp/Md75hPoFCax6xO4yQzvMDJESUTekHDlg==", "user"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('') LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_errors.html.erb (3.0ms)
+  Rendered users/_form.html.erb (7.4ms)
+  Rendered users/new.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 292ms (Views: 269.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2015-11-29 18:32:42 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 252ms (Views: 251.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-29 18:32:43 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6ZQgAi8JL2k+S1oSDELcCh251AuadAFdDPgYn9iZlLe6ZmdvDoowXW39orSeqB7Dn5+LpYdcrZgMcayNhI4zug==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 270ms (Views: 255.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-11-29 18:32:47 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7pfNDawLSPO5nSNWKnUSowuRrJWJKjq66XP8Kz9RPxO9ZYpgjYhXx+or2/C4n9BqibfzO5QCln/p+kg5Y0aYHg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 18:32:47 +0300
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 253ms (Views: 252.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2015-11-29 18:32:59 +0300
+Processing by UsersController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" LIMIT 5 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 256ms (Views: 255.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/locations" for ::1 at 2015-11-29 18:33:11 +0300
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  Rendered locations/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 278ms (Views: 260.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/locations/new" for ::1 at 2015-11-29 18:34:13 +0300
+Processing by LocationsController#new as HTML
+  Rendered locations/_form.html.erb (3.6ms)
+  Rendered locations/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 270ms (Views: 269.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/locations" for ::1 at 2015-11-29 18:34:24 +0300
+Processing by LocationsController#index as HTML
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered locations/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 269ms (Views: 267.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/locations/5" for ::1 at 2015-11-29 18:34:35 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered locations/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 272ms (Views: 264.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/locations" for ::1 at 2015-11-29 18:34:42 +0300
+Processing by LocationsController#index as HTML
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations"
+  Rendered locations/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 262ms (Views: 261.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/locations" for ::1 at 2015-11-29 18:34:54 +0300
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  Rendered locations/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 260ms (Views: 258.5ms | ActiveRecord: 0.2ms)
