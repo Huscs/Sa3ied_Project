@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :users, except: [:new]
 
   # Location
-  get 'getlocation', to:'locations#index'
+  get 'getlocation', to:'locations#new'
 
 
   ### the following lines 10-11 shows when we added a new routes and run rake routes (Verb - Http GET)
