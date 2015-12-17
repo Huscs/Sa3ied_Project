@@ -1,0 +1,35 @@
+#Feature
+
+A .feature file is supposed to describe a single feature of the system, or a particular aspect of a feature. It's just a way to provide a high-level description of a software feature, and to group related scenarios.
+
+A feature has three basic elements—the Feature: keyword, a name (on the same line) and an optional (but highly recommended) description that can span multiple lines.
+
+#Scenario
+
+A scenario is a concrete example that illustrates a business rule. It consists of a list of steps.
+
+You can have as many steps as you like, but we recommend you keep the number at 3-5 per scenario. If they become longer than that they lose their expressive power as specification and documentation.
+
+
+#Steps
+
+A step typically starts with Given, When or Then. If there are multiple Given or When steps underneath each other, you can use And or But. Cucumber does not differentiate between the keywords, but choosing the right one is important for the readability of the scenario as a whole.
+
+
+#Given
+
+Given steps are used to describe the initial context of the system—the scene of the scenario. It is typically something that happened in the past.
+
+
+#When
+
+When steps are used to describe an event, or an action. This can be a person interacting with the system, or it can be an event triggered by another system.
+
+
+#Then
+
+Then steps are used to describe an expected outcome, or result.
+
+#Background
+
+Occasionally you'll find yourself repeating the same Given steps in all of the scenarios in a feature file. Since it is repeated in every scenario it is an indication that those steps are not essential to describe the scenarios, they are incidental details.
