@@ -3,8 +3,12 @@ As a help seeker I want to request a help
 So, volunteers know my location
 then come to fix my car.
 
+Background:
+
+  Given I am on create location page
+
 Scenario: Successful request a help
-Given I am on create location page
+
 When I fill out the form with the following attributes:
       | Location    | Riyadh                  |
       | Address     | King Abdullah road      |

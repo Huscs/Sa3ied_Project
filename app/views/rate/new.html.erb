@@ -1,0 +1,21 @@
+<h3 align="center">Rate Volunteer</h3>
+
+<%= form_for(:rate, :html => {class: "form-horizontal", role: "form"}, url: rateme_path) do |f| %>
+
+
+        <div class="field">
+
+        <%= f.label :email , 'Email' %><br>
+        <%= f.text_field :email, placeholder: "Enter email", autofocus: true %>
+      </div>
+
+        <div class="field">
+        <%= f.label :score , 'score' %><br>
+        <%= f.text_field :score, placeholder: "Rate from 1 - 5" %>
+      </div>
+
+
+     <div class="actions">
+    <%= f.submit "Rate"%>
+  </div>
+      <% end %>
