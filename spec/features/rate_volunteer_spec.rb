@@ -7,18 +7,14 @@ RSpec.feature "Rate a volunteer" do
 
     click_link "Rate a Volunteer"
 
-    click_link "Rate me"
 
 
-    # fill_in "Location", with: "King Saud University"
-    # fill_in "Address", with: "Riyadh, Riyadh Province"
-    # fill_in "Description", with: "change car tyre"
-    # fill_in "Latitude", with: ""
-    # fill_in "Longitude", with: ""
+    fill_in "Email", with: "haldriye@gmail.com"
+    fill_in "Score", with: "5"
 
-    # click_button "Create Location"
+    click_button "Rate"
 
-    # expect(page).to have_content("Location was successfully created.")
+    expect(page).to have_content("Volunteer has been rated")
 
 
   end
