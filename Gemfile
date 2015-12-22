@@ -59,6 +59,7 @@ end
 
 group :test do
   gem 'cucumber-rails', :require => false
+  gem 'capybara', '2.5.0'
   gem 'fakeweb'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
