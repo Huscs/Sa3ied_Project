@@ -42,7 +42,7 @@ class LocationsController < ApplicationController
         format.json { render :show, status: :created, location: @location }
       else
 
-        flash[:danger] = "Location has not been created"
+        flash.now[:danger] = "Location has not been created"
         format.html { render :new }
         #format.json { render json: @location.errors, status: :unprocessable_entity }
       end
