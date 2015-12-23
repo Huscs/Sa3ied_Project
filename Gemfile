@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
+gem "responders"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'bcrypt', '~> 3.1.7'
@@ -47,6 +48,8 @@ group :development, :test do
   gem 'rspec-rails','3.2.3'
   gem 'guard-rspec', require: false
   gem 'spring-commands-rspec' 
+  gem 'shoulda-matchers'
+
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -64,6 +67,10 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'capybara', '2.5.0'
   gem 'fakeweb'
+  gem 'shoulda'
+  gem 'shoulda-context'
+
+
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end

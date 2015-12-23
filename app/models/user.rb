@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 
+  validates :rating, :inclusion => 1..5 #between 1 to 5
 	validates :username, presence: true, 
 		      uniqueness: { case_sensitive: false },
 			  length: {minimum: 3, maximum: 25}

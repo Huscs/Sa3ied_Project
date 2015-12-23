@@ -1,5 +1,5 @@
 class RateController < ApplicationController
-
+respond_to :html, :json
   def new
     
   end
@@ -9,21 +9,22 @@ class RateController < ApplicationController
     #debugger
     #render 'new'
     user = User.find_by(email: params[:rate][:email].downcase) #all emails are downcase in out DB.
-    
-    if user #(params[:rate][:score]).present?
+    score = (params[:rate][:score]).to_i
+    email = params[:rate][:email]
+    flash[:alert] = "volunteer has been rated" 
 
-    # user.rating = (params[:rate][:score]).to_i
-    # user.save
-    flash[:success] = "Volunteer has been rated" 
-    # render 'new'
-    render 'new'
+respond_to do |format|
+end
+    if user && !(email.empty?) && score.between?(1,5)
+
+          user.rating = score
+          user.save
+          #render 'new'
+          redirect_to volunteers_path          
 
     else
-
-    flash[:danger] = "not found" 
-    flash[:success] = "Volunteer has been rated" 
-
-    # flash[:danger] = "Please fill up email & rate"
+    flash.clear
+    flash.now[:danger] = "please enter a valid email address & score" 
     render 'new'
 
     end
@@ -31,8 +32,5 @@ class RateController < ApplicationController
 
       
   end
-
- 
-
 
 end
