@@ -4,8 +4,27 @@ class UsersController < ApplicationController
 
 	def index
 
-		@users = User.all
+
 		#User.paginate(page: params[:page], per_page: 5)
+		
+    #@users = User.search(score).order("created_at DESC")
+   	if (params[:search]).present?
+   		score = (params[:search]).to_i
+    	@users = User.search(score)
+
+    		if (User.search(score).exists?) && score.between?(1,5)# found
+    			flash[:success] = "Volunteer/s found"
+    		else
+    			flash.now[:danger] = "not found"
+    		end
+    		
+
+ 		else
+ 			flash.now[:success] = "list all Volunteers"
+ 			@users = User.all
+
+ 		end
+ 		
 		
 	end
 
