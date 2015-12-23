@@ -1,5 +1,5 @@
 class RateController < ApplicationController
-respond_to :html, :json
+#respond_to :html, :json
   def new
     
   end
@@ -13,8 +13,7 @@ respond_to :html, :json
     email = params[:rate][:email]
     flash[:alert] = "volunteer has been rated" 
 
-respond_to do |format|
-end
+
     if user && !(email.empty?) && score.between?(1,5)
 
           user.rating = score
