@@ -25,7 +25,7 @@ When(/^I press Rate$/) do
 end
 
 Then(/^I should see Volunteer has been rated$/) do
-  expect(page).to have_content("Volunteer has been rated")
+  expect(page).to have_content("volunteer has been rated")
 
 end
 

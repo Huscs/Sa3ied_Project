@@ -16,9 +16,6 @@ RSpec.feature "Rate a volunteer" do
     click_button "Rate"
 
     expect(page).to have_content("volunteer has been rated")
-    #expect(page).to set_flash[:success]
-    #expect(flash[:success]).to be_present
-    #flash[:success].should_not be_nil
     expect(page.current_path).to eq(rateme_path)
 
   end

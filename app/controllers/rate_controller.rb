@@ -11,8 +11,7 @@ class RateController < ApplicationController
     user = User.find_by(email: params[:rate][:email].downcase) #all emails are downcase in out DB.
     score = (params[:rate][:score]).to_i
     email = params[:rate][:email]
-    flash[:alert] = "volunteer has been rated" 
-
+    flash[:success] = "volunteer has been rated" 
 
     if user && !(email.empty?) && score.between?(1,5)
 
@@ -22,8 +21,8 @@ class RateController < ApplicationController
           redirect_to volunteers_path          
 
     else
-    flash.clear
-    flash.now[:danger] = "please enter a valid email address & score" 
+    #flash.clear
+    flash[:danger] = "please enter a valid email address & score" 
     render 'new'
 
     end
