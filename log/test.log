@@ -9773,3 +9773,2197 @@ Processing by PagesController#home as HTML
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:09:35 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 275ms (Views: 262.9ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:09:35 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:09:35 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:09:35 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:09:35 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:09:35 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:09:35 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:09:35 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (3.8ms)
+  Rendered locations/_form.html.erb (38.9ms)
+  Rendered locations/new.html.erb within layouts/application (41.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 67ms (Views: 49.4ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:09:35 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "King Saud University"], ["address", "Riyadh, Riyadh Province"], ["latitude", 25.0054482], ["longitude", 46.544831], ["created_at", "2015-12-24 12:09:36.310588"], ["updated_at", "2015-12-24 12:09:36.310588"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 401ms (ActiveRecord: 1.1ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 15:09:36 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:09:36 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:09:36 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.3ms)
+  Rendered locations/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:09:36 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered locations/_form.html.erb (3.5ms)
+  Rendered locations/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:09:36 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:09:36 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.4ms)
+  Rendered locations/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:09:36 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "blah"], ["address", "blah"], ["latitude", 48.1603191], ["longitude", 8.8528498], ["created_at", "2015-12-24 12:09:36.719582"], ["updated_at", "2015-12-24 12:09:36.719582"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 329ms (ActiveRecord: 0.6ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 15:09:36 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 318ms (Views: 308.2ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (3.3ms)
+  Rendered locations/_form.html.erb (28.3ms)
+  Rendered locations/new.html.erb within layouts/application (31.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 57ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "locations" ("location", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location", "King Saud University"], ["address", "Riyadh, Riyadh Province"], ["created_at", "2015-12-24 12:12:32.474620"], ["updated_at", "2015-12-24 12:12:32.474620"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 19ms (ActiveRecord: 1.2ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.5ms)
+  Rendered locations/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.5ms)
+  Rendered locations/_form.html.erb (3.9ms)
+  Rendered locations/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.3ms)
+  Rendered locations/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "blah"], ["address", "blah"], ["latitude", 0.0], ["longitude", 0.0], ["created_at", "2015-12-24 12:12:32.589961"], ["updated_at", "2015-12-24 12:12:32.589961"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 15:12:32 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:39:00 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 281ms (Views: 270.1ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:39:00 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:39:00 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:39:00 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:39:00 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:39:00 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:39:00 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:39:00 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (3.9ms)
+  Rendered locations/_form.html.erb (39.1ms)
+  Rendered locations/new.html.erb within layouts/application (42.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 71ms (Views: 52.0ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:39:00 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (2.0ms)
+  Rendered locations/_form.html.erb (5.3ms)
+  Rendered locations/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2370ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:39:02 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:39:02 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.3ms)
+  Rendered locations/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:39:02 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.8ms)
+  Rendered locations/_form.html.erb (4.1ms)
+  Rendered locations/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:39:02 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:39:02 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.7ms)
+  Rendered locations/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:39:02 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.9ms)
+  Rendered locations/_form.html.erb (6.8ms)
+  Rendered locations/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 362ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:40:12 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 311ms (Views: 298.9ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:40:12 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (3.1ms)
+  Rendered locations/_form.html.erb (32.7ms)
+  Rendered locations/new.html.erb within layouts/application (36.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 45.1ms | ActiveRecord: 0.6ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:40:12 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.9ms)
+  Rendered locations/_form.html.erb (5.3ms)
+  Rendered locations/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 314ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:40:13 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:40:13 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.8ms)
+  Rendered locations/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:40:13 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (2.0ms)
+  Rendered locations/_form.html.erb (5.3ms)
+  Rendered locations/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:40:13 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.6ms)
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:40:13 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.6ms)
+  Rendered locations/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:40:13 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.5ms)
+  Rendered locations/_form.html.erb (5.0ms)
+  Rendered locations/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 310ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:40:17 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 253ms (Views: 243.9ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.2ms)
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (3.2ms)
+  Rendered locations/_form.html.erb (38.3ms)
+  Rendered locations/new.html.erb within layouts/application (41.1ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 66ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (2.1ms)
+  Rendered locations/_form.html.erb (5.5ms)
+  Rendered locations/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 313ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.3ms)
+  Rendered locations/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.9ms)
+  Rendered locations/_form.html.erb (4.5ms)
+  Rendered locations/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.5ms)
+  Rendered locations/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:40:18 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (2.4ms)
+  Rendered locations/_form.html.erb (6.7ms)
+  Rendered locations/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 326ms (Views: 11.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:54:57 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.7ms)
+  Rendered pages/home.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 288ms (Views: 278.5ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:54:57 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:54:57 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:54:57 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:54:57 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:54:57 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:54:57 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:54:57 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (3.1ms)
+  Rendered locations/_form.html.erb (40.0ms)
+  Rendered locations/new.html.erb within layouts/application (42.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 51.1ms | ActiveRecord: 0.4ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:54:57 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (2.2ms)
+  Rendered locations/_form.html.erb (6.3ms)
+  Rendered locations/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8083ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:55:05 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:55:05 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.8ms)
+  Rendered locations/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:55:05 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (2.0ms)
+  Rendered locations/_form.html.erb (4.6ms)
+  Rendered locations/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:55:05 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:55:05 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (3.3ms)
+  Rendered locations/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:55:05 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.9ms)
+  Rendered locations/_form.html.erb (6.2ms)
+  Rendered locations/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 317ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:57:03 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.7ms)
+  Rendered pages/home.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 279ms (Views: 269.4ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.2ms)
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (23.6ms)
+  Rendered locations/_form.html.erb (43.3ms)
+  Rendered locations/new.html.erb within layouts/application (46.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 76ms (Views: 59.1ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (2.1ms)
+  Rendered locations/_form.html.erb (5.3ms)
+  Rendered locations/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 292ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.3ms)
+  Rendered locations/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.8ms)
+  Rendered locations/_form.html.erb (4.0ms)
+  Rendered locations/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.9ms)
+  Rendered locations/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:57:04 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.6ms)
+  Rendered locations/_form.html.erb (6.2ms)
+  Rendered locations/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 309ms (Views: 10.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 272ms (Views: 262.2ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 3.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (22.8ms)
+  Rendered locations/_form.html.erb (40.9ms)
+  Rendered locations/new.html.erb within layouts/application (43.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 69ms (Views: 51.2ms | ActiveRecord: 0.5ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "King Saud University"], ["address", "Riyadh, Riyadh Province"], ["latitude", 25.0054482], ["longitude", 46.544831], ["created_at", "2015-12-24 12:58:04.948632"], ["updated_at", "2015-12-24 12:58:04.948632"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 295ms (ActiveRecord: 1.3ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.3ms)
+  Rendered locations/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:58:04 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered locations/_form.html.erb (3.6ms)
+  Rendered locations/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 15:58:05 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 15:58:05 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.5ms)
+  Rendered locations/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 15:58:05 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "blah"], ["address", "blah"], ["latitude", 48.1603191], ["longitude", 8.8528498], ["created_at", "2015-12-24 12:58:05.319160"], ["updated_at", "2015-12-24 12:58:05.319160"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 295ms (ActiveRecord: 0.5ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 15:58:05 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:01:32 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 291ms (Views: 282.3ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:01:32 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:01:32 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:01:32 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:01:32 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:01:32 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:01:32 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:01:32 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (4.1ms)
+  Rendered locations/_form.html.erb (42.4ms)
+  Rendered locations/new.html.erb within layouts/application (45.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 69ms (Views: 53.6ms | ActiveRecord: 0.6ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:01:32 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "King Saud University"], ["address", "Riyadh, Riyadh Province"], ["latitude", 25.0054482], ["longitude", 46.544831], ["created_at", "2015-12-24 13:01:33.379339"], ["updated_at", "2015-12-24 13:01:33.379339"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 385ms (ActiveRecord: 1.4ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 16:01:33 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:01:33 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:01:33 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.3ms)
+  Rendered locations/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:01:33 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.5ms)
+  Rendered locations/_form.html.erb (3.9ms)
+  Rendered locations/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:01:33 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:01:33 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.8ms)
+  Rendered locations/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:01:33 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "blah"], ["address", "blah"], ["latitude", 48.1603191], ["longitude", 8.8528498], ["created_at", "2015-12-24 13:01:33.764131"], ["updated_at", "2015-12-24 13:01:33.764131"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 305ms (ActiveRecord: 0.6ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 16:01:33 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:32:16 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered pages/home.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 325ms (Views: 315.7ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:32:16 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:32:16 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:32:16 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:32:16 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:32:16 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:32:16 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.2ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:32:16 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (21.4ms)
+  Rendered locations/_form.html.erb (40.2ms)
+  Rendered locations/new.html.erb within layouts/application (42.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 68ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:32:16 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"Riyadh, Riyadh Province", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered locations/_form.html.erb (4.3ms)
+  Rendered locations/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 958ms (Views: 7.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:32:17 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:32:17 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.2ms)
+  Rendered locations/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:32:17 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.7ms)
+  Rendered locations/_form.html.erb (3.9ms)
+  Rendered locations/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:32:17 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:32:17 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.9ms)
+  Rendered locations/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:32:17 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"blah", "longitude"=>"blah"}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered locations/_form.html.erb (4.4ms)
+  Rendered locations/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 339ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:32:55 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered pages/home.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 317ms (Views: 307.1ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:32:55 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (3.5ms)
+  Rendered locations/_form.html.erb (30.7ms)
+  Rendered locations/new.html.erb within layouts/application (33.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:32:55 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"12 King Abdullah st Riyadh", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "King Saud University"], ["address", "12 King Abdullah st Riyadh"], ["latitude", 24.751228], ["longitude", 46.71993699999999], ["created_at", "2015-12-24 13:32:56.324157"], ["updated_at", "2015-12-24 13:32:56.324157"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 559ms (ActiveRecord: 1.2ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 16:32:56 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:32:56 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:32:56 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.4ms)
+  Rendered locations/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:32:56 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (2.0ms)
+  Rendered locations/_form.html.erb (4.5ms)
+  Rendered locations/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:32:56 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:32:56 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (3.3ms)
+  Rendered locations/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:32:56 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered locations/_form.html.erb (4.7ms)
+  Rendered locations/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 310ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:36 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 275ms (Views: 265.5ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:33:37 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (4.0ms)
+  Rendered locations/_form.html.erb (31.2ms)
+  Rendered locations/new.html.erb within layouts/application (33.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:33:37 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"12 King Abdullah st", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "King Saud University"], ["address", "12 King Abdullah st"], ["latitude", 25.3110394], ["longitude", 49.5968747], ["created_at", "2015-12-24 13:33:37.662922"], ["updated_at", "2015-12-24 13:33:37.662922"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 546ms (ActiveRecord: 1.3ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 16:33:37 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:37 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:33:37 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.6ms)
+  Rendered locations/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:33:37 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.8ms)
+  Rendered locations/_form.html.erb (4.3ms)
+  Rendered locations/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:37 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:33:37 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.6ms)
+  Rendered locations/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:33:37 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered locations/_form.html.erb (4.4ms)
+  Rendered locations/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 317ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:42 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 249ms (Views: 240.5ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:33:42 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:33:42 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:42 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:33:42 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:33:42 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:42 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.2ms)
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:33:42 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (3.1ms)
+  Rendered locations/_form.html.erb (38.0ms)
+  Rendered locations/new.html.erb within layouts/application (40.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 66ms (Views: 49.2ms | ActiveRecord: 0.4ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:33:42 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"12 King Abdullah st", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "King Saud University"], ["address", "12 King Abdullah st"], ["latitude", 25.3110394], ["longitude", 49.5968747], ["created_at", "2015-12-24 13:33:43.009446"], ["updated_at", "2015-12-24 13:33:43.009446"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 478ms (ActiveRecord: 0.6ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 16:33:43 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (6.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:43 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:33:43 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.7ms)
+  Rendered locations/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:33:43 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.8ms)
+  Rendered locations/_form.html.erb (4.1ms)
+  Rendered locations/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:43 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:33:43 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (4.2ms)
+  Rendered locations/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:33:43 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered locations/_form.html.erb (5.7ms)
+  Rendered locations/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 324ms (Views: 10.4ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:47 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 243ms (Views: 234.3ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:33:47 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:33:47 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:47 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:33:47 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:33:47 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:47 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.2ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:33:47 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (3.3ms)
+  Rendered locations/_form.html.erb (36.9ms)
+  Rendered locations/new.html.erb within layouts/application (40.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 63ms (Views: 48.3ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:33:47 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"12 King Abdullah st", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "King Saud University"], ["address", "12 King Abdullah st"], ["latitude", 25.3110394], ["longitude", 49.5968747], ["created_at", "2015-12-24 13:33:48.367403"], ["updated_at", "2015-12-24 13:33:48.367403"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 493ms (ActiveRecord: 0.6ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 16:33:48 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (6.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:48 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:33:48 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.7ms)
+  Rendered locations/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:33:48 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.8ms)
+  Rendered locations/_form.html.erb (4.1ms)
+  Rendered locations/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:33:48 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:33:48 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.7ms)
+  Rendered locations/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:33:48 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered locations/_form.html.erb (5.4ms)
+  Rendered locations/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 303ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered pages/home.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 266ms (Views: 257.4ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (2.5ms)
+  Rendered locations/_form.html.erb (23.7ms)
+  Rendered locations/new.html.erb within layouts/application (25.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"12 King Abdullah st", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "King Saud University"], ["address", "12 King Abdullah st"], ["latitude", 25.3110394], ["longitude", 49.5968747], ["created_at", "2015-12-24 13:34:14.891124"], ["updated_at", "2015-12-24 13:34:14.891124"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 328ms (ActiveRecord: 1.1ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (20.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (2.3ms)
+  Rendered locations/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.8ms)
+  Rendered locations/_form.html.erb (4.1ms)
+  Rendered locations/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered locations/_form.html.erb (3.4ms)
+  Rendered locations/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:34:14 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered locations/_form.html.erb (4.5ms)
+  Rendered locations/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 310ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:34:25 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (1.0ms)
+  Rendered pages/home.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 249ms (Views: 239.9ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:34:25 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:34:25 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"haldriye@gmail.com", "score"=>"5"}, "commit"=>"Rate"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "haldriye@gmail.com"]]
+  Rendered rate/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:34:25 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started GET "/rateme" for 127.0.0.1 at 2015-12-24 16:34:25 +0300
+Processing by RateController#new as HTML
+  Rendered rate/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/rateme" for 127.0.0.1 at 2015-12-24 16:34:25 +0300
+Processing by RateController#create as HTML
+  Parameters: {"utf8"=>"✓", "rate"=>{"email"=>"", "score"=>"6"}, "commit"=>"Rate"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered rate/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:34:25 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.2ms)
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:34:25 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (19.9ms)
+  Rendered locations/_form.html.erb (35.9ms)
+  Rendered locations/new.html.erb within layouts/application (38.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 63ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:34:25 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"King Saud University", "address"=>"12 King Abdullah st", "description"=>"change car tyre", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "locations" ("location", "address", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["location", "King Saud University"], ["address", "12 King Abdullah st"], ["latitude", 25.3110394], ["longitude", 49.5968747], ["created_at", "2015-12-24 13:34:28.757714"], ["updated_at", "2015-12-24 13:34:28.757714"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/locations/1
+Completed 302 Found in 3266ms (ActiveRecord: 0.7ms)
+Started GET "/locations/1" for 127.0.0.1 at 2015-12-24 16:34:28 +0300
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered locations/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (6.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:34:28 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:34:28 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered locations/_form.html.erb (3.5ms)
+  Rendered locations/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:34:28 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"", "address"=>"", "description"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.8ms)
+  Rendered locations/_form.html.erb (4.2ms)
+  Rendered locations/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-12-24 16:34:28 +0300
+Processing by PagesController#home as HTML
+  Rendered layouts/_search.html.erb (0.4ms)
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started GET "/getlocation" for 127.0.0.1 at 2015-12-24 16:34:28 +0300
+Processing by LocationsController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered locations/_form.html.erb (2.9ms)
+  Rendered locations/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started POST "/locations" for 127.0.0.1 at 2015-12-24 16:34:28 +0300
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "location"=>{"location"=>"blah", "address"=>"blah", "description"=>"blah", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (1.2ms)
+  Rendered locations/_form.html.erb (6.2ms)
+  Rendered locations/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 401ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
