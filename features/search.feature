@@ -8,7 +8,6 @@ Background:
   Given I am on home page
 
 Scenario: Successful volunteers search
-When I fill out the search field with a valid score
+When I fill out the search field with ""
 And I press Search
-Then I should see the top rated volunteers with rating grater than or equle score.
-And I should see message "The search is successfully done"  
+Then I should see the top rated volunteers with rating grater than or equle "" if exist
