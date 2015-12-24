@@ -8,10 +8,9 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'volunteers', to: 'users#index'
-  
+  get 'search', to: 'users#index'
   get 'rateme', to: 'rate#new'
   post 'rateme', to: 'rate#create'
-
   get  'signup' , to: 'users#new'
   get  'about' , to: 'pages#about'
   get 'login', to: 'sessions#new'

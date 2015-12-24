@@ -12,4 +12,10 @@ class User < ActiveRecord::Base
 
 	has_secure_password
 
+  def self.search(search)
+
+     where("rating > ?", search)
+
+  end
+
 end
