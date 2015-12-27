@@ -8,6 +8,7 @@ Background:
   Given I am on home page
 
 Scenario: Successful volunteers search
-When I fill out the search field with ""
-And I press Search
-Then I should see the top rated volunteers with rating grater than or equle "" if exist
+Then I should see "Search volunteers based on rating"
+When I fill out the search field with "1"
+And I press "Search"
+Then I should go to volunteers page and I see Volunteers List

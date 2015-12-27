@@ -14,8 +14,9 @@ class User < ActiveRecord::Base
 
   def self.search(search)
 
-     where("rating > ?", search)
+     @user = where("rating > ?", search)
 
   end
+
 
 end
